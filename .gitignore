@@ -1,0 +1,30 @@
+# PyCharm 编辑器配置
+.idea/
+
+# 数据文件夹（图片太大）
+data/raw/
+data/processed/
+
+# 模型权重
+checkpoints/
+*.pth
+*.onnx
+
+# 训练日志
+runs/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 环境
+.env
+.venv/
+venv/
+ENV/
+
+# 系统文件
+.DS_Store
+Thumbs.db
