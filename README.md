@@ -41,28 +41,28 @@ steel_defect_detection/
 │   ├── rle_decode.py           # 将RLE转Mask
 │   └── slice_images.py         # 将数据raw切片保存到processed
 │
-├── checkpoints/				        # 存放训练过程中保存的Pytorch权重 (.pth)
-├── runs/						            # 存放训练日志、损失曲线图等
+├── checkpoints/				# 存放训练过程中保存的Pytorch权重 (.pth)
+├── runs/						# 存放训练日志、损失曲线图等
 │
-├── utils/						          # 存放通用工具脚本
+├── utils/						# 存放通用工具脚本
 │   ├── __init__.py
-│   ├── dataset.py				      # 数据加载与预处理
-│   └── metrics.py				      # 评估指标计算（如Accuracy、Precision、Recall、ROC、AUC、F1-Score）
+│   ├── dataset.py				# 数据加载与预处理
+│   └── metrics.py				# 评估指标计算（如Accuracy、Precision、Recall、ROC、AUC、F1-Score）
 │
-├── models/						          # 模型定义
+├── models/						# 模型定义
 │   ├── __init__.py
-│   ├── resnet18_baseline.py	  # ResNet18 基线模型
-│   └── resnet_vit_hybrid.py	  # ResNet18 + ViT 融合模型
+│   ├── resnet18_baseline.py	# ResNet18 基线模型
+│   └── resnet_vit_hybrid.py	# ResNet18 + ViT 融合模型
 │
-├── data_analysis.py			      # 分析数据集
-├── config.py					          # 全局配置文件（超参数、路径等）
-├── train.py					          # 模型训练
-├── evaluate.py					        # 模型评估
-├── predict.py					        # Pytorch推理预测
-├── compare_models.py			      # 模型比对
+├── data_analysis.py			# 分析数据集
+├── config.py					# 全局配置文件（超参数、路径等）
+├── train.py					# 模型训练
+├── evaluate.py					# 模型评估
+├── predict.py					# Pytorch推理预测
+├── compare_models.py			# 模型比对
 │
-├── export_onnx.py				      # PyTorch（.pth）→ONNX（.onnx）导出
-└── infer_onnx.py				        # ONNX Runtime推理
+├── export_onnx.py				# PyTorch（.pth）→ONNX（.onnx）导出
+└── infer_onnx.py				# ONNX Runtime推理
 ```
 
 ## 环境配置
