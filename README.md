@@ -29,39 +29,40 @@
 ```bash
 steel_defect_detection/
 ├── data/
-│   ├── raw/                    # 原始 Kaggle 数据
-│   │   ├── train.csv           # 原始 RLE 标注
-│   │   └── train_images/       # 1600x256 原始长图
-│   └── processed/              # 预处理后数据
-│       ├── train_sliced.csv    # 切片后标注
-│       └── train_images_sliced/# 256x256 切片小图
+│   ├── raw/                    # 存放最原始的 Kaggle 数据
+│   │   ├── train.csv           # 原始标注（包含 RLE 编码）
+│   │   └── train_images/       # 原始 1600x256 长图
+│   └── processed/              # 存放预处理后的数据
+│       ├── train_sliced.csv    # 切片后的新标注
+│       └── train_images_sliced/# 切好的 256x256 小图
 │
-├── preprocess/                 # 数据预处理模块
+├── preprocess/                 # 数据加工
 │   ├── __init__.py
-│   ├── rle_decode.py           # RLE 转掩码
-│   └── slice_images.py         # 长图切片
+│   ├── rle_decode.py           # 将RLE转Mask
+│   └── slice_images.py         # 将数据raw切片保存到processed
 │
-├── checkpoints/                # 模型权重 .pth
-├── runs/                       # 训练日志、可视化结果
+├── checkpoints/				        # 存放训练过程中保存的Pytorch权重 (.pth)
+├── runs/						            # 存放训练日志、损失曲线图等
 │
-├── utils/                      # 工具函数
+├── utils/						          # 存放通用工具脚本
 │   ├── __init__.py
-│   ├── dataset.py              # 数据集加载
-│   └── metrics.py              # 多标签评估指标
+│   ├── dataset.py				      # 数据加载与预处理
+│   └── metrics.py				      # 评估指标计算（如Accuracy、Precision、Recall、ROC、AUC、F1-Score）
 │
-├── models/                     # 模型定义
+├── models/						          # 模型定义
 │   ├── __init__.py
-│   ├── resnet18_baseline.py    # ResNet18 基线
-│   └── resnet_vit_hybrid.py    # ResNet18+ViT 混合
+│   ├── resnet18_baseline.py	  # ResNet18 基线模型
+│   └── resnet_vit_hybrid.py	  # ResNet18 + ViT 融合模型
 │
-├── data_analysis.py            # 数据集分析
-├── config.py                   # 全局配置
-├── train.py                    # 模型训练
-├── evaluate.py                 # 模型评估
-├── predict.py                  # PyTorch 推理
-├── compare_models.py           # 模型对比
-├── export_onnx.py              # 导出 ONNX
-└── infer_onnx.py               # ONNX Runtime 推理
+├── data_analysis.py			      # 分析数据集
+├── config.py					          # 全局配置文件（超参数、路径等）
+├── train.py					          # 模型训练
+├── evaluate.py					        # 模型评估
+├── predict.py					        # Pytorch推理预测
+├── compare_models.py			      # 模型比对
+│
+├── export_onnx.py				      # PyTorch（.pth）→ONNX（.onnx）导出
+└── infer_onnx.py				        # ONNX Runtime推理
 ```
 
 ## 环境配置
