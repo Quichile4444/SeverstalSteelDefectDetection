@@ -4,7 +4,7 @@
 
 ## 项目简介
 
-本项目针对 **Kaggle 2019 Severstal: Steel Defect Detection** 数据集，完成钢材缺陷的**4 分类多标签检测**。
+本项目针对 [**Kaggle 2019 Severstal: Steel Defect Detection**](https://www.kaggle.com/competitions/severstal-steel-defect-detection/data) 数据集，完成钢材缺陷的**4 分类多标签检测**。
 
 - 解决 1600×256 长条钢材图像的缺陷识别问题
 
